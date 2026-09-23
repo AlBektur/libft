@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: besaipid <besaipid@student.42barcelona.co  +#+  +:+       +#+        */
+/*   By: besaipid <besaipid@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/23 15:00:43 by besaipid          #+#    #+#             */
-/*   Updated: 2026/09/24 00:08:41 by besaipid         ###   ########.fr       */
+/*   Created: 2026/09/24 00:13:38 by besaipid          #+#    #+#             */
+/*   Updated: 2026/09/24 00:15:38 by besaipid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
-	write(fd, &c, 1);
+	int	i;
+
+	i = 0;
+	while (s[i])
+	{
+		write(fd, &s[i], 1);
+		i++;
+	}
+	write(fd, "\n", 1);
 }
-/*
-int	main(void)
-{
-	int	fd;
-
-	fd = open("text", O_RDWR);
-	if (fd == -1)
-		printf("something wrong happened\n");
-	ft_putchar_fd('a', fd);
-
-	return (0);
-}*/
