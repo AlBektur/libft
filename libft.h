@@ -6,7 +6,7 @@
 /*   By: besaipid <besaipid@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 02:39:52 by besaipid          #+#    #+#             */
-/*   Updated: 2026/09/23 13:20:43 by besaipid         ###   ########.fr       */
+/*   Updated: 2026/09/23 15:47:04 by besaipid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@
 # include <stdlib.h>
 # include <limits.h>
 # include <string.h>
-
+# include <fcntl.h>
+# include <unistd.h>
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
@@ -57,4 +58,6 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+void	ft_putchar_fd(char c, int fd);
 #endif
