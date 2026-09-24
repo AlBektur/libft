@@ -6,7 +6,7 @@
 /*   By: besaipid <besaipid@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/21 23:36:48 by besaipid          #+#    #+#             */
-/*   Updated: 2026/09/22 12:36:41 by besaipid         ###   ########.fr       */
+/*   Updated: 2026/09/24 03:32:09 by besaipid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	i;
 	int		j;
 
-	if (!little)
+	if (little == NULL)
 		return ((char *)big);
 	i = 0;
 	while (big[i] && i < len)
@@ -33,5 +33,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		}
 		i++;
 	}
+	if (little[0] == '\0')
+		return ((char *)big);
 	return (NULL);
 }

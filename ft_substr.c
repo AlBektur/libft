@@ -6,7 +6,7 @@
 /*   By: besaipid <besaipid@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 12:38:26 by besaipid          #+#    #+#             */
-/*   Updated: 2026/09/22 12:51:15 by besaipid         ###   ########.fr       */
+/*   Updated: 2026/09/24 00:49:00 by besaipid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char		*res;
-	size_t		t;
 	size_t		j;
 
 	j = start;

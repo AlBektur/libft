@@ -6,7 +6,7 @@
 /*   By: besaipid <besaipid@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 12:52:01 by besaipid          #+#    #+#             */
-/*   Updated: 2026/09/22 12:57:27 by besaipid         ###   ########.fr       */
+/*   Updated: 2026/09/24 00:22:41 by besaipid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*res;
-	int		size;
+	char		*res;
+	int			size;
 	int			i;
 	int			j;
 
@@ -38,5 +38,4 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	}
 	res[i] = '\0';
 	return (res);
-
 }

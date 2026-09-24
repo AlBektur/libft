@@ -6,7 +6,7 @@
 /*   By: besaipid <besaipid@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 16:01:36 by besaipid          #+#    #+#             */
-/*   Updated: 2026/09/22 19:15:45 by besaipid         ###   ########.fr       */
+/*   Updated: 2026/09/24 03:33:41 by besaipid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,11 +74,10 @@ void	fill(char **res, char const *s, char c, int len)
 	int		start;
 	int		end;
 	int		i;
-	char	*flag;
 
 	i = 0;
 	start = 0;
-	while (i < len)
+	while (i < (len - 1))
 	{
 		while (s[start] == c)
 			start++;

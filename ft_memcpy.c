@@ -6,7 +6,7 @@
 /*   By: besaipid <besaipid@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/21 20:32:49 by besaipid          #+#    #+#             */
-/*   Updated: 2026/09/22 11:26:58 by besaipid         ###   ########.fr       */
+/*   Updated: 2026/09/24 01:44:32 by besaipid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	while (i < n)
 	{
 		d[i] = s[i];
-		d++;
-		s++;
 		i++;
 	}
 	return (dest);

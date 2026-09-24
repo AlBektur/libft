@@ -6,9 +6,11 @@
 /*   By: besaipid <besaipid@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/24 00:09:20 by besaipid          #+#    #+#             */
-/*   Updated: 2026/09/24 00:11:51 by besaipid         ###   ########.fr       */
+/*   Updated: 2026/09/24 00:47:55 by besaipid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {

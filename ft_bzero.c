@@ -6,7 +6,7 @@
 /*   By: besaipid <besaipid@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/21 20:22:05 by besaipid          #+#    #+#             */
-/*   Updated: 2026/09/22 11:02:46 by besaipid         ###   ########.fr       */
+/*   Updated: 2026/09/24 01:42:56 by besaipid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ void	ft_bzero(void *s, size_t n)
 	while (i < n)
 	{
 		ptr[i] = '\0';
-		ptr++;
 		i++;
 	}
 }
