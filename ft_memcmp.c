@@ -6,7 +6,7 @@
 /*   By: besaipid <besaipid@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/21 22:49:22 by besaipid          #+#    #+#             */
-/*   Updated: 2026/09/22 11:24:12 by besaipid         ###   ########.fr       */
+/*   Updated: 2026/09/24 04:11:09 by besaipid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	src_2 = (const unsigned char *)s2;
 	while (i < n && (src_1[i] || src_2[i]))
 	{
-		if (src_1[i] != src_2[i])
-			return (src_1[i] - src_2[i]);
+		if ((unsigned char)src_1[i] != (unsigned char)src_2[i])
+			return ((unsigned char)src_1[i] - (unsigned char)src_2[i]);
 		i++;
 	}
 	return (0);

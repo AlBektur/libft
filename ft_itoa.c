@@ -6,7 +6,7 @@
 /*   By: besaipid <besaipid@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/23 12:14:54 by besaipid          #+#    #+#             */
-/*   Updated: 2026/09/23 13:19:10 by besaipid         ###   ########.fr       */
+/*   Updated: 2026/09/24 04:29:43 by besaipid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 // to count the digits
 
-int	counter(int n)
+int	counter(long n)
 {
 	int	i;
 
@@ -53,7 +53,7 @@ void	ft_reverse(char *str)
 	}
 }
 
-void	ft_fill(char *res, int n, int i, int sign)
+void	ft_fill(char *res, long n, int i, long sign)
 {
 	if (n < 0)
 		n *= -1;
@@ -83,14 +83,16 @@ char	*ft_itoa(int n)
 {
 	char		*res;
 	int			i;
-	int			sign;
+	long		sign;
+	long		nb;
 
 	i = 0;
-	sign = n;
-	res = malloc(sizeof(int) * (counter(n) + 1));
+	nb = (long)n;
+	sign = nb;
+	res = malloc(sizeof(int) * (counter(nb) + 1));
 	if (res == NULL)
 		return (NULL);
-	ft_fill(res, n, i, sign);
+	ft_fill(res, nb, i, sign);
 	ft_reverse(res);
 	return (res);
 }

@@ -6,7 +6,7 @@
 /*   By: besaipid <besaipid@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 12:38:26 by besaipid          #+#    #+#             */
-/*   Updated: 2026/09/24 00:49:00 by besaipid         ###   ########.fr       */
+/*   Updated: 2026/09/24 04:37:28 by besaipid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t		j;
 
 	j = start;
+	if (!s)
+		return (NULL);
 	while (s[j])
 		j++;
 	if ((j - start) < len)

@@ -6,7 +6,7 @@
 /*   By: besaipid <besaipid@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/24 00:16:25 by besaipid          #+#    #+#             */
-/*   Updated: 2026/09/24 00:18:38 by besaipid         ###   ########.fr       */
+/*   Updated: 2026/09/24 04:42:54 by besaipid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,4 +18,5 @@ void	ft_putnbr_fd(int n, int fd)
 
 	nb = ft_itoa(n);
 	ft_putstr_fd(nb, fd);
+	free(nb);
 }
