@@ -6,60 +6,90 @@
 /*   By: besaipid <besaipid@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 14:35:20 by besaipid          #+#    #+#             */
-/*   Updated: 2026/09/22 15:58:30 by besaipid         ###   ########.fr       */
+/*   Updated: 2026/09/25 01:55:57 by besaipid         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bsaipidi <bsaipidi@student.42barcelon      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/09 17:58:48 by bsaipidi          #+#    #+#             */
+/*   Updated: 2025/10/12 04:44:28 by bsaipidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	is_inset(char c, char *set)
+static int	ft_start(char const *s1, char const *set)
 {
-	int	i;
+	size_t	i;
+	size_t	j;
+	size_t	flag;
 
 	i = 0;
-	while (set[i])
+	while (s1[i] != '\0')
 	{
-		if (set[i] == c)
-			return (1);
+		j = 0;
+		flag = 0;
+		while (set[j] != '\0')
+		{
+			if (s1[i] == set[j])
+			{
+				flag = 1;
+			}
+			j++;
+		}
+		if (!flag)
+			return (i);
 		i++;
 	}
-	return (0);
+	return (i);
 }
 
-int	def_len(char *s1, char *set)
+static int	ft_end(char const *s1, char const *set)
 {
-	int	i;
-	int	j;
+	int			i;
+	size_t		j;
+	size_t		flag;
 
-	i = 0;
-	j = 0;
-	while (is_inset(s1[i], set))
-		i++;
-	i--;
-	while (s1[j])
-		j++;
-	j--;
-	while (is_inset(s1[j], set))
-		j--;
-	return (j - i);
+	i = (int )ft_strlen(s1) - 1;
+	while (i >= 0)
+	{
+		j = 0;
+		flag = 0;
+		while (set[j] != '\0')
+		{
+			if (s1[i] == set[j])
+				flag = 1;
+			j++;
+		}
+		if (!flag)
+			return (i);
+		i--;
+	}
+	return (i);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		len;
-	int		i;
-	int		k;
 	char	*res;
+	ssize_t	i;
+	ssize_t	j;
+	size_t	k;
 
-	len = def_len((char *)s1, (char *)set);
-	res = malloc(len + 1);
-	if (!res)
+	i = ft_start(s1, set);
+	j = ft_end(s1, set) + 1;
+	if (!s1[i] || j - i < 0)
+		return (ft_strdup(""));
+	res = malloc(j - i + 1);
+	if (res == NULL)
 		return (NULL);
 	k = 0;
-	i = 0;
-	while (is_inset(s1[i], (char *)set))
-		i++;
-	while (k < len)
+	while (i < j)
 	{
 		res[k] = s1[i];
 		k++;
@@ -68,10 +98,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	res[k] = '\0';
 	return (res);
 }
-/*
-int	main(int argc, char *argv[])
-{
-	ft_strtrim(argv[1], argv[2]);
-
-	return (0);
-}*/

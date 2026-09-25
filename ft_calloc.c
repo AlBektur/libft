@@ -6,7 +6,7 @@
 /*   By: besaipid <besaipid@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 01:22:33 by besaipid          #+#    #+#             */
-/*   Updated: 2026/09/22 11:06:12 by besaipid         ###   ########.fr       */
+/*   Updated: 2026/09/25 00:48:41 by besaipid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	long	len;
 
 	len = nmemb * size;
-	if (len >= INT_MAX)
-		return (NULL);
 	if (len == 0)
 		return (malloc(0));
+	if (nmemb != 0 && len / nmemb != size)
+		return (NULL);
 	res = malloc(len);
 	if (!res)
 		return (NULL);

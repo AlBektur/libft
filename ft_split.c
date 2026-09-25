@@ -6,7 +6,7 @@
 /*   By: besaipid <besaipid@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 16:01:36 by besaipid          #+#    #+#             */
-/*   Updated: 2026/09/24 03:33:41 by besaipid         ###   ########.fr       */
+/*   Updated: 2026/09/25 15:55:19 by besaipid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ void	ft_cleaner(char **res, int size)
 		i++;
 	}
 	free(res);
+	res = NULL;
 }
 
 void	fill(char **res, char const *s, char c, int len)
@@ -105,7 +106,13 @@ char	**ft_split(char const *s, char c)
 	res = malloc(sizeof(char *) * (len + 1));
 	if (!res)
 		return (NULL);
-	fill(res, s, c, (len + 1));
+	if (len == 0)
+	{
+		res[0] = NULL;
+		return (res);
+	}
+	else
+		fill(res, s, c, (len + 1));
 	return (res);
 }
 /*

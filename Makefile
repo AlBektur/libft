@@ -6,7 +6,7 @@
 #    By: besaipid <besaipid@student.42barcelon      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/09/24 00:45:54 by besaipid          #+#    #+#              #
-#    Updated: 2026/09/24 04:57:06 by besaipid         ###   ########.fr        #
+#    Updated: 2026/09/25 14:48:00 by besaipid         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,9 +23,9 @@ SRC       := ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c\
 	     ft_strdup.c ft_striteri.c ft_strjoin.c ft_strlcat.c ft_strlcpy.c\
 	     ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnstr.c ft_strrchr.c\
 	     ft_strtrim.c ft_substr.c ft_tolower.c ft_toupper.c\
-#		 ft_lstnew.c\
-#	     ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c\
-#	     ft_lstdelone.c ft_lstclear.c ft_lstiter.c
+	     ft_lstnew.c\
+	     ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c\
+	     ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
 OBJS      := $(SRC:.c=.o)
 
@@ -42,5 +42,5 @@ clean:
 fclean: clean
 	$(RM) $(NAME)
 re: fclean all
-
+bonus: all
 .PHONY : all clean fclean re 
