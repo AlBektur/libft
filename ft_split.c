@@ -6,7 +6,7 @@
 /*   By: besaipid <besaipid@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 16:01:36 by besaipid          #+#    #+#             */
-/*   Updated: 2026/09/25 15:55:19 by besaipid         ###   ########.fr       */
+/*   Updated: 2026/09/26 15:07:48 by besaipid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,15 +104,14 @@ char	**ft_split(char const *s, char c)
 
 	len = ft_wordcounter(s, c);
 	res = malloc(sizeof(char *) * (len + 1));
-	if (!res)
+	if (!res || !s)
 		return (NULL);
 	if (len == 0)
 	{
 		res[0] = NULL;
 		return (res);
 	}
-	else
-		fill(res, s, c, (len + 1));
+	fill(res, s, c, (len + 1));
 	return (res);
 }
 /*
@@ -120,7 +119,10 @@ int	main(int argc, char *argv[])
 {
 	int i = ft_wordcounter(argv[1], argv[2][0]);
 
-	ft_split(argv[1], argv[2][0]);
+	char **res = ft_split(argv[1], argv[2][0]);
+
+	for (int j = 0; j < i + 1 ; j++)
+		printf("%s\n", res[j]);
 	printf("%d\n", i);
 	return (0);
 }*/

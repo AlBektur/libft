@@ -6,7 +6,7 @@
 /*   By: besaipid <besaipid@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/25 12:13:54 by besaipid          #+#    #+#             */
-/*   Updated: 2026/09/25 15:39:45 by besaipid         ###   ########.fr       */
+/*   Updated: 2026/09/26 14:58:25 by besaipid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new_elem;
 	t_list	*tmp;
 
-	if (!lst || !f || del == NULL)
+	if (!lst || !f || !del)
 		return (NULL);
 	new_list = NULL;
 	while (lst)
