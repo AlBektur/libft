@@ -188,9 +188,9 @@ To use libft in another C project, include the header:
 
 
 Then compile your program together with the library:
-
+`
 cc main.c -I. -L. -lft -o program
-
+`
 
 Here:
 
@@ -207,7 +207,8 @@ For example:
 #include "libft.h"
 #include <stdio.h>
 
-`int main(void)
+`
+int main(void)
 {
     char *str;
 
@@ -219,7 +220,8 @@ For example:
     printf("%s\n", str);
     free(str);
     return (0);
-}`
+}
+`
 
 
 Compile it with:
@@ -228,9 +230,9 @@ cc main.c -I. -L. -lft -o run
 
 
 Then run:
-
+`
 ./run
-
+`
 Technical Choices
 
 The project is written in C and follows the coding standards and restrictions defined by the 42 curriculum.
@@ -296,13 +298,14 @@ AI was used as an educational aid rather than as a replacement for understanding
 Project Structure
 
 A typical project structure is:
-
-`libft/
+``
+libft/
 ├── Makefile
 ├── README.md
 ├── libft.h
 ├── ft_*.c
-└── ...`
+└── ...
+``
 
 **Goal**
 
